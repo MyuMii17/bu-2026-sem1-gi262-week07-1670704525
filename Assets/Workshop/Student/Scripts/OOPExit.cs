@@ -19,7 +19,12 @@ namespace Solution
                 leaderboard.gameObject.SetActive(true);
 
                 Debug.Log("You win");
-                //add code to manage leaderboard scores
+                int score = CalculateScore();
+                string name = mapGenerator.player.Name;
+                
+                leaderboard.RecordScore(new PlayerScore(name, score)); 
+                leaderboard.PrintScores();
+                leaderboard.ShowleaderBoard();
     
                 return true;
             }
