@@ -125,33 +125,23 @@ namespace Assignment
             {
                 arrayTarget = new int[]{first, last};
             }
+             
             return arrayTarget;
         }
 
         public int AS02_FindMaxLessThan(int[] array, int target)
         {
-            int value;
-
-            int lessThanTagetIndex = -1;
+            int lessThanTaget = -1;
 
             for(int i = 0; i < array.Length; i++)
             {
-                if(array[i] < target && array[i] > lessThanTagetIndex)
+                if(array[i] < target && array[i] > lessThanTaget)
                 {
-                    lessThanTagetIndex = i;
+                    lessThanTaget = array[i];
                 }
             }
 
-            if(lessThanTagetIndex == -1)
-            {
-                value = -1;
-            }
-            else
-            {
-                value = array[lessThanTagetIndex];
-            }
-
-            return value;
+            return lessThanTaget;
         }
 
         public int[] AS03_FindRange(int[] array, int min, int max)
